@@ -3,7 +3,7 @@ Wro-2025-future-engineers--KillBot X
 
 The folder we have uploaded contains: 
 
-A folder named ¨t-photos¨ with a normal photo of the tree members of the team: Kathiusca Arcia, Sofia Barrias and Estyfen Adames.
+A folder named ¨t-photos¨ with a normal photo and a funny photo of the tree members of the team: Kathiusca Arcia, Sofia Barrias and Estyfen Adames.
 
 A folder named ¨v-photos¨ with six vehicle photos from every side, from top and bottom.
 
