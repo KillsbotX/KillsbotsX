@@ -1,97 +1,89 @@
-👥 Team Members
-Meet the brilliant minds behind KillBot X:
+# WRO KillBot X 2025
 
-Kathiusca Arcia
+Bienvenid@ al repositorio del equipo **KillBot X** para la World Robot Olympiad (WRO) 2025. Aquí encontrarás documentación, código fuente, fotos, videos de nuestro robot autonomo.
 
-Sofia Barrias
+> **Estado:** en desarrollo iterativo. Si notas alguna inconsistencia entre documentos, por favor abre un *issue*.
 
-Estyfen Adames
+---
 
-You can find both formal and fun photos of our team in the /t-photos folder.
+## Resumen del Proyecto
 
-🚗 Vehicle Overview
-Our autonomous vehicle is designed to perform consistent, high-speed laps using precise sensor feedback and efficient motor control.
-Photos from all angles are located in the /v-photos folder for better understanding of the design.
+**KillBot X** es un vehículo autónomo que completa vueltas en un circuito cerrado manteniendo trayectoria estable mediante **giroscopio** y control fino de motores. Emplea visión/computación (cuando corresponde), sensores de distancia y detección de color para evitar paredes/obstáculos y reaccionar a marcadores del reto.
 
-Chassis: Custom-built using LEGO Technic components
+- **Chasis:** LEGO Technic
+- **Controlador:** LEGO Mindstorms EV3
+- **Sensores clave:** Giroscopio; distancia ultrasónico; color
+- **Tren motriz:** diferencial de dos motores
 
-Controller: LEGO Mindstorms EV3
+> El objetivo es demostrar que con componentes accesibles se pueden construir sistemas funcionales y bien documentados.
 
-Main Sensor: Gyroscope
+---
 
-Drive System: Two-motor differential drive
+## Índice General del Proyecto
 
-🎥 Video Demonstration
-The robot in action!
-Watch our autonomous run in the qualifying round via this YouTube link:
-📹 KillBot X in Action
+1. **[Visión General](/docs/overview.md)** – Componentes principales y fases de operación.
+2. **[Hardware y Componentes](/docs/hardware.md)** – Especificaciones electrónicas y mecánicas.  
+   - **[Esquema Electromecánico](/schemes/)**  
+   - **[Diseño de circuito interactivo](/embeds/index.html)** *(opcional con GitHub Pages)*
+3. **[Arquitectura de Software](/docs/software.md)** – Librerías, estructura de carpetas y flujo del código.
+4. **[Sensores y Pines](/docs/sensors.md)** – Rol de cada sensor y asignación de pines/puertos.
+5. **[Movilidad del Robot](/docs/mobility.md)** – Configuración de motores y giros/curvas.
+6. **[Control PID del Giroscopio](/docs/pid.md)** – Calibración e implementación para estabilidad.
+7. **[Visión con Cámara](/docs/vision.md)** – Detección y evasión con PixyCam u otra cámara. *(si aplica)*
+8. **[Ultrasónico y Filtros](/docs/ultrasonic.md)** – Medición de distancia y filtrado.
+9. **[Detección de Color](/docs/color.md)** – Calibración y lógica de uso.
+10. **[Modelado 3D y Fabricación](/docs/models.md)** – Modelos STL y parámetros de impresión.
+11. **[Manual de Usuario](/docs/user-manual.md)** – Construcción, operación y solución de problemas.
 
-Link is included in the video/video.txt file.
+---
 
-🔌 Electromechanical Schematics
-The /schemes folder contains detailed diagrams showing:
+## Fotos y Videos
 
-All electronic components
+- **Fotos del Equipo:** [/t-photos](/t-photos)
+- **Fotos del Vehículo:** [/v-photos](/v-photos)
+- **Video Demostrativo:** (https://youtu.be/RNI24cD9cLQ?si=tq7dkKawt0CTLH3k) 
 
-Motor connections
+---
 
-Sensor integration
+## Código Fuente
 
-Power distribution
-These diagrams help understand how the hardware integrates with our EV3 controller.
+Todo el código de control y pruebas vive en la carpeta **`/src`**. Sugerimos organizarlo así:
 
-🧠 Programming with LEGO Mindstorms EV3
-We used the LEGO Mindstorms app to develop our control algorithm. The gyroscope sensor is central to our navigation system.
+- `src/ev3/` – programas en EV3 (bloques o MicroPython).  
+- `src/tests/` – códigos de prueba de sensores y motores.  
+- `src/tools/` – utilidades (calibración, registro de datos, etc.).
 
-🔁 Block Sequence Used:
-Start Block (Play):
+> Ejemplo: control autónomo con giroscopio, pruebas de MPU, evasión de obstáculos, etc.
 
-Initializes the program.
 
-Gyroscope Sensor Block:
+---
 
-Reads the robot’s orientation.
+## Diagramas y Gráficas
 
-Sound Block:
+- **Flujogramas de operación:** en **`/assets`** o **`/docs`**.  
+- **Gráficas de calibración:** exporta PNG/SVG y enlaza desde `/docs/pid.md`.
 
-Robot says “Okey-Dokey” to confirm start.
+---
 
-Motor A Block:
+## Integrantes del Equipo 🧑‍💻🧑‍🔧
 
-Set to -100 power/sec for forward movement.
+- **Kathiusca Arcia** – Programación y documentación
+- **Sofía Barrias** – Electrónica y pruebas
+- **Estyfen Adames** – coordinación y control
+  
+> En **`/t-photos`** encontrarás fotos formales y divertidas del equipo.
 
-Motor D Blocks (Steering):
+---
 
-Initial position: 0 degrees
+## Cómo colaborar
 
-Adjusted: -100 power, -23 degrees
-(Varies slightly depending on track quadrant)
+Consulta **[CONTRIBUTING.md](CONTRIBUTING.md)** y abre *issues* con plantillas:
+- **Reporte de bug**
+- **Solicitud de mejora / feature**
 
-Double Loop Structure:
 
-Inner Loop:
+---
 
-Controls motor A at -100 power.
+## Agradecimientos
 
-Sets desired lap count (e.g., 3 laps).
-
-Outer Loop:
-
-Exit condition based on gyroscope reading.
-
-Uses comparison: > 3 and value 1060
-
-Adjusted from 360° x 3 = 1080 for tuning.
-
-🔧 This loop allows dynamic lap control and fine-tuning of stop position.
-
-You can find the actual program in the /src folder, compatible with LEGO Mindstorms EV3.
-
-🏁 Project Highlights
-✅ Reliable lap detection using gyroscope
-
-✅ efficient motor control
-
-✅ Public video documentation
-
-✅ Full team collaboration
+A la comunidad WRO y a quienes comparten recursos abiertos para aprendizaje en robótica educativa.
