@@ -1,0 +1,43 @@
+from ev3dev2.motor import LargeMotor, OUTPUT_B
+from time import sleep
+
+m = LargeMotor(OUTPUT_B)
+
+print("Motor adelante 2 segundos")
+m.on_for_seconds(50, 2)  # 50% de potencia durante 2 seg
+from ev3dev2.motor import LargeMotor, OUTPUT_B, OUTPUT_C, MoveTank
+from time import sleep
+
+tank = MoveTank(OUTPUT_B, OUTPUT_C)
+
+print("Avanzar recto 3 seg")
+tank.on_for_seconds(50, 50, 3)
+
+print("Giro sobre eje 2 seg")
+tank.on_for_seconds(50, -50, 2)
+from ev3dev2.sensor.lego import GyroSensor
+from time import sleep
+
+gyro = GyroSensor()
+
+print("Lectura de giroscopio (grados)")
+for i in range(10):
+    print("Ángulo:", gyro.angle)
+    sleep(0.5)
+from ev3dev2.motor import LargeMotor, OUTPUT_B, OUTPUT_C, MoveTank
+from ev3dev2.sensor.lego import GyroSensor, UltrasonicSensor, ColorSensor
+from time import sleep
+
+# Motores
+tank = MoveTank(OUTPUT_B, OUTPUT_C)
+# Sensores
+gyro = GyroSensor()
+ultra = UltrasonicSensor()
+color = ColorSensor()
+
+print("Avanzando 2 seg mientras leo sensores...")
+tank.on(40, 40)
+for i in range(4):
+    print("Gyro:", gyro.angle, "° | Distancia:", ultra.distance_centimeters, "cm | Color:", color.color_name)
+    sleep(0.5)
+tank.off()
