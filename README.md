@@ -47,10 +47,8 @@ Bienvenid@ al repositorio del equipo **KillBot X** para la World Robot Olympiad 
 
 ## Código Fuente
 
-Todo el código de control y pruebas vive en la carpeta **`/src`**. Sugerimos organizarlo así:
-
-- `[/src]` – programas en EV3 (bloques o MicroPython).  
-- [/src](/test)` – códigos de prueba de sensores y motores.  
+- `[src]` – programas en EV3 (bloques o MicroPython).  
+- [/src-test] – códigos de prueba de sensores y motores.  
 
 
 ---
