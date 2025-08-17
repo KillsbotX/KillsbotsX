@@ -49,11 +49,8 @@ Bienvenid@ al repositorio del equipo **KillBot X** para la World Robot Olympiad 
 
 Todo el código de control y pruebas vive en la carpeta **`/src`**. Sugerimos organizarlo así:
 
-- `src/ev3/` – programas en EV3 (bloques o MicroPython).  
-- `src/tests/` – códigos de prueba de sensores y motores.  
-- `src/tools/` – utilidades (calibración, registro de datos, etc.).
-
-> Ejemplo: control autónomo con giroscopio, pruebas de MPU, evasión de obstáculos, etc.
+- `[/src]` – programas en EV3 (bloques o MicroPython).  
+- [/src](/test)` – códigos de prueba de sensores y motores.  
 
 
 ---
