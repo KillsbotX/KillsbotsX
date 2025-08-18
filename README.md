@@ -21,7 +21,7 @@ Bienvenid@ al repositorio del equipo **KillBot X** para la World Robot Olympiad 
 
 ## Índice General del Proyecto
 
-1. **[Visión General](/docs/overview.md)** – Componentes principales y fases de operación.
+1. **[Visión General](documentos.)** – Componentes principales y fases de operación.
 2. **[Hardware y Componentes](/docs/hardware.md)** – Especificaciones electrónicas y mecánicas.  
    - **[Esquema Electromecánico](/schemes/)**  
    - **[Diseño de circuito interactivo](/embeds/index.html)** *(opcional con GitHub Pages)*
